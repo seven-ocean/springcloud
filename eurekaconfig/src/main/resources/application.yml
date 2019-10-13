@@ -2,7 +2,7 @@ server:
   port: 8888
 spring:
   application:
-    name: config
+    name: eurekaconfig
   profiles:
     active: dev
   cloud:
@@ -10,9 +10,9 @@ spring:
       server:
         git:
           uri: https://github.com/seven-ocean/springcloud.git #配置git仓库地址
-          searchPaths: 第09课/config #配置仓库路径
-          username: ****** #访问git仓库的用户名
-          password: ****** #访问git仓库的用户密码
+          searchPaths: config #配置仓库路径
+          username: seven-ocean #访问git仓库的用户名
+          password: zg0030727326 #访问git仓库的用户密码
       label: master #配置仓库的分支
 eureka:
   client:
