@@ -14,6 +14,13 @@ spring:
           username: seven-ocean #访问git仓库的用户名
           password: zg0030727326 #访问git仓库的用户密码
       label: master #配置仓库的分支
+  rabbitmq:
+          host: 127.0.0.1
+          port: 15672
+          username: guest
+          password: guest
+          virtualHost: /
+          publisherConfirms: true
 eureka:
   client:
     serviceUrl:
