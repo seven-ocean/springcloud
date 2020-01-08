@@ -1,4 +1,7 @@
 eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
@@ -7,6 +10,11 @@ server:
 spring:
   application:
     name: eurekafeign
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 # 熔断器
 feign:
   hystrix:

@@ -1,5 +1,8 @@
 spring:
   cloud:
+    bus:
+      trace:
+        enable: true
     config:
       name: eurekaclient
       label: master
@@ -7,6 +10,9 @@ spring:
         enabled: true
         serviceId: eurekaconfig
 eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/

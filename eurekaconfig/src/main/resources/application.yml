@@ -6,6 +6,9 @@ spring:
   profiles:
     active: dev
   cloud:
+    bus:
+      trace:
+        enable: true
     config:
       server:
         git:
@@ -16,12 +19,15 @@ spring:
       label: master #配置仓库的分支
   rabbitmq:
           host: 127.0.0.1
-          port: 15672
+          port: 5672
           username: guest
           password: guest
           virtualHost: /
           publisherConfirms: true
 eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
