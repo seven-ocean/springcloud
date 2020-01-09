@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>eurekaserver</artifactId>
+    <name>注册中心</name>
 
     <dependencies>
         <dependency>

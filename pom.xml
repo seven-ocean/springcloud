@@ -13,6 +13,7 @@
         <module>eurekagateway</module>
         <module>eurekafeign</module>
         <module>eurekaconfig</module>
+        <module>eurekadistrlock</module>
     </modules>
 
     <packaging>pom</packaging>

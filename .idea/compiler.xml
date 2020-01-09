@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaclient" />
         <module name="eurekaconfig" />
+        <module name="eurekadistrlock" />
         <module name="eurekafeign" />
         <module name="eurekagateway" />
         <module name="eurekaserver" />
